@@ -3,11 +3,11 @@
 
 generator client {
   provider = "prisma-client-js" // Pastikan menggunakan prisma-client-js
+  
 }
-
 datasource db {
   provider = "mysql"
-  url      = env("DATABASE_URL")
+  url    = env("DATABASE_URL")
 }
 
 enum Specialization {

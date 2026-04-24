@@ -1,53 +1,52 @@
 import express from 'express';
 import { PrismaClient } from '@prisma/client';
-const router = express.Router();
-
 const prisma = new PrismaClient();
-const app = express();
 
-router.get("/informasidokter",async (req,res)=>{
-    const allUser=await prisma.user.findMany()
-    res.send(allUser)
+const doctorUserrouter = express.Router();
+
+doctorUserrouter.get("/informasidokter", async (req, res) => {
+  try {
+    const allUser = await prisma.infDokter.findMany();
+    res.json(allUser);
+  } catch (err) {
+    res.status(500).json({ error: "Gagal mengambil data" });
+  }
 });
 
-router.post("/registerdokter",async (req,res)=>{
-    const {namaLengkap,subSpesialisasi,email,nomorTelepon,mulaiPraktik,jadwal,janjiTemu}=req.body;
-   try{
-    const allUser=await prisma.user.create({
-        data:{
-            namaLengkap,subSpesialisasi,email,nomorTelepon,mulaiPraktik,jadwal,janjiTemu
-        },
-
-    })
-    res.status(200)}
-    catch(err){
-        res.send(400).json({err:"Input Data Dokter Error Silahkan coba lagi."});
-    }
-});
-
-router.patch("/updatedatadokter/:id",(req,res)=>{
-    const {id,email}=req.params.id;
-    let resultSearch={};
-    const {namaLengkap,subSpesialisasi,email,nomorTelepon,mulaiPraktik,jadwal,janjiTemu}=req.body;
-
-    if (id) {
-    searchCriteria = { id: Number(id) };
-    } else if (email) {
-    searchCriteria = { email: email };
-    } else {
-    return res.status(400).json({ error: "Harus menyertakan ID atau Email untuk update" });
-    }
-    try {
-    const updatedUser = await prisma.user.update({
-      where: resultSearch,
-      data: {  
-        namaLengkap,subSpesialisasi,email,nomorTelepon,mulaiPraktik,jadwal,janjiTemu
-      }
+doctorUserrouter.post("/registerdokter", async (req, res) => {
+  const { namaLengkap, subSpesialisasi, email, nomorTelepon, mulaiPraktik } = req.body;
+  
+  try {
+    const newUser = await prisma.infDokter.create({
+      data: { namaLengkap, subSpesialisasi, email, nomorTelepon, mulaiPraktik }
     });
-    }
-    catch(err){
-        res.send(400).json({err:"Update Data Dokter Error Silahkan coba lagi."});
-    }
+    res.status(201).json(newUser).send("Input Data Dokter Error");
+  } catch (err) {
+    res.status(400).json({ error:err.message });
+  }
 });
 
-module.exports = router;
+doctorUserrouter.patch("/updatedatadokter/:id", async (req, res) => {
+  const { id } = req.params;
+  try {
+    const updatedUser = await prisma.infDokter.update({
+      where: { id: Number(id) },
+      data: req.body
+    });
+    res.json(updatedUser);
+  } catch (err) {
+    res.status(400).json({ error: "Update gagal" });
+  }
+});
+
+doctorUserrouter.delete("/deletedatadokter/:id", async (req, res) => {
+  const { id } = req.params;
+  try {
+    await prisma.infDokter.delete({ where: { id: Number(id) } });
+    res.json({ message: "Data berhasil dihapus" });
+  } catch (err) {
+    res.status(400).json({ error: "Delete gagal" });
+  }
+});
+
+export default doctorUserrouter;
