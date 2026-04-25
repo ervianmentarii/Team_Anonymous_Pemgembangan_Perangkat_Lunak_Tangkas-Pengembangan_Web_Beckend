@@ -78,7 +78,7 @@ Website ini dilengkapi dengan berbagai fitur untuk memudahkan pengelolaan layana
 | Anggota | Fitur yang Dikerjakan |
 |---------|----------------------|
 | Ervian | Authentication, Doctor Management, Appointment|
-| Laurencio | ?|
+| Laurencio | home menu,navbar,dan footer|
 | Shawn | ? |
 | Jonathan |? |
 
