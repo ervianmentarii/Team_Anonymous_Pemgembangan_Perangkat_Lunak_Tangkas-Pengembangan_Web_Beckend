@@ -63,9 +63,9 @@ Website dibangun menggunakan **Express.js** (Back-End) dan **React js** (Front-E
     ```
     npm run dev
     ```
-6. API akan berjalan di `http://localhost:8000/` (atau sesuai konfigurasi port).
+6. API akan berjalan di `http://localhost:5000/` (atau sesuai konfigurasi port).
    ```
-   http://localhost:8000/
+   http://localhost:5000/
    ```
 
 **Front-End (UI):**
