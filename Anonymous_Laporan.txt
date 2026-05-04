@@ -1,0 +1,318 @@
+SMARTHEALTH - SISTEM INFORMASI KESEHATAN
+Dokumentasi & Deskripsi Proyek
+
+
+================================================================================
+DESKRIPSI SINGKAT
+================================================================================
+
+SmartHealth adalah sebuah aplikasi web sistem informasi kesehatan berbasis
+fullstack yang dirancang khusus untuk mendukung operasional klinik kardiologi
+secara digital dan modern. Aplikasi ini memungkinkan pasien untuk mendaftar,
+login, melihat daftar dokter beserta jadwal praktiknya, dan membuat janji temu
+konsultasi secara langsung melalui halaman web tanpa perlu menelepon atau datang
+langsung ke klinik. Di sisi lain, staf medis dan administrator klinik dapat
+mengelola data pasien, memantau seluruh janji temu, serta memperbarui status
+konsultasi melalui dashboard khusus staff yang terintegrasi dengan database
+secara real-time. Sistem ini dibangun dengan arsitektur REST API yang memisahkan
+frontend dan backend secara jelas sehingga setiap bagian dapat dikerjakan,
+dikembangkan, dan dipelihara secara mandiri oleh masing-masing anggota tim.
+SmartHealth memanfaatkan teknologi mutakhir seperti React, Express.js, Prisma
+ORM, dan MySQL untuk menghadirkan pengalaman pengguna yang cepat, responsif, dan
+aman bagi seluruh pengguna, baik pasien maupun tenaga medis. Proyek ini
+merupakan hasil kolaborasi tim yang terdiri dari empat developer dengan
+pembagian peran yang jelas, mulai dari desain antarmuka, pengembangan backend,
+manajemen database, hingga pengujian dan integrasi sistem secara menyeluruh.
+
+
+================================================================================
+TEAM DEVELOPER
+================================================================================
+
+Proyek         : SmartHealth - Sistem Informasi Kesehatan
+Institusi      : Universitas / Program Studi Teknik Informatika
+Jumlah Anggota : 4 Orang
+
+1. Laurencio Luckson          - Frontend Dev     (241110805)
+2. Ervian Mentari             - Backend Dev,Orm Dev & Db Dev (241110896)
+3. Shawn Michael              - Database Dev     (241111461)
+4. Jonathan Felix Fubrianto   - QA & Integrator  (241112984)
+
+
+1. LAURENCIO LUCKSON - Frontend Developer
+
+Bertanggung jawab atas seluruh tampilan antarmuka pengguna (UI) aplikasi
+SmartHealth. Mengerjakan seluruh komponen React mulai dari halaman beranda,
+halaman daftar dokter, detail dokter, jadwal dokter, hingga halaman kontak
+dan layanan. Merancang sistem routing halaman menggunakan React Router DOM
+dan memastikan tampilan responsif di berbagai ukuran layar menggunakan
+Tailwind CSS. Juga mengerjakan komponen Navbar, Footer, dan layout umum
+yang konsisten di seluruh halaman aplikasi.
+
+Kontribusi Utama:
+- Implementasi seluruh halaman publik (Home, Services, Doctors, Contact)
+- Desain komponen Navbar dan Footer yang responsif
+- Konfigurasi React Router DOM dan struktur halaman
+- Styling global dengan Tailwind CSS dan PostCSS
+- Setup project Vite + React dan konfigurasi awal frontend
+
+
+2. ERVIAN MENTARI - Backend & Database Developer
+Bertanggung jawab atas seluruh logika server dan pembuatan REST API menggunakan Express.js. Merancang 
+dan mengimplementasikan semua endpoint API yang digunakan frontend, termasuk sistem autentikasi JWT untuk 
+login pasien dan staff, enkripsi password dengan bcryptjs, serta pengelolaan CORS agar frontend dan backend 
+dapat berkomunikasi dengan aman. Memastikan setiap response API mengembalikan format data yang konsisten dan 
+sesuai dengan kebutuhan komponen frontend. Merancang skema database relasional 8 tabel dengan MySQL 8.0 serta 
+mengintegrasikan Prisma ORM sebagai jembatan antara server Node.js dan database.
+
+Kontribusi Utama:
+- Implementasi REST API lengkap (auth, dokter, pasien, appointment)
+- Sistem login JWT untuk pasien dan staff dengan role-based access
+- Enkripsi dan validasi password menggunakan bcryptjs
+- Konfigurasi Express.js, CORS, dotenv, dan middleware
+- Penanganan error dan validasi request dengan Express Validator
+- Perancangan skema database relasional 8 tabel dengan foreign key
+- Penulisan SQL DDL lengkap (CREATE TABLE, constraint, index)
+- Konfigurasi Prisma ORM dan pembuatan schema.prisma
+- Optimasi query dan pengelolaan relasi antar tabel
+
+3. SHAWN MICHAEL - Frontend & UI/UX Developer
+Bertanggung jawab dalam membantu pengembangan antarmuka pengguna aplikasi 
+SmartHealth agar tampilan lebih baik, responsif, dan dinamis. Berkontribusi 
+dalam peningkatan pengalaman pengguna (UX) serta memastikan komponen frontend berjalan 
+dengan interaktif dan konsisten di berbagai ukuran layar. Turut membantu proses koneksi 
+endpoint antara frontend dan backend agar komunikasi data berjalan dengan lancar.
+
+Kontribusi Utama:
+- Peningkatan tampilan UI agar lebih modern dan responsif
+- Perbaikan layout dan komponen frontend untuk pengalaman pengguna yang lebih baik
+- Implementasi elemen dinamis pada halaman antarmuka
+- Penyesuaian desain komponen agar konsisten di seluruh halaman
+- Membantu pengujian tampilan dan interaksi pengguna
+- Membantu koneksi endpoint API antara frontend dan backend
+
+
+4. JONATHAN FELIX FUBRIANTO - QA & System Integrator
+
+Bertanggung jawab atas pengujian menyeluruh dan integrasi antara frontend
+dan backend agar seluruh fitur berjalan dengan baik secara end-to-end.
+Mengerjakan halaman-halaman yang membutuhkan integrasi langsung dengan API,
+termasuk halaman login (pasien & staff), registrasi, dashboard pasien,
+dashboard staff, riwayat janji temu, rekam medis, dan alur booking janji
+temu multi-step. Memastikan format data yang dikirim server sesuai dengan
+yang diharapkan frontend dan memperbaiki seluruh ketidaksesuaian (mismatch)
+antara kedua sisi.
+
+Kontribusi Utama:
+- Implementasi halaman Login (tab pasien & staff, akun demo, show/hide password)
+- Implementasi alur Buat Janji Temu 4 langkah (pilih dokter, tanggal, waktu, konfirmasi)
+- Implementasi Dashboard Pasien dan Dashboard Staff
+- Implementasi halaman Riwayat Janji Temu dan Rekam Medis
+- Pengujian integrasi API dan perbaikan format response end-to-end
+
+
+================================================================================
+TEKNOLOGI YANG DIGUNAKAN
+================================================================================
+
+FRONTEND
+
+Framework        : React 18 (Vite sebagai build tool)
+Styling          : Tailwind CSS + PostCSS
+Routing          : React Router DOM v6
+HTTP Client      : Axios
+Notifikasi       : React Hot Toast
+Icons            : React Icons (Font Awesome)
+Utilitas Tanggal : date-fns (dengan locale Bahasa Indonesia)
+Port Dev         : 3000
+
+BACKEND
+
+Runtime          : Node.js (ES Modules / ESM)
+Framework        : Express.js v5
+ORM              : Prisma v5
+Database         : MySQL 8.0 (charset utf8mb4)
+Autentikasi      : JSON Web Token (JWT) + bcryptjs
+Validasi         : Express Validator
+Upload File      : Multer
+Email            : Nodemailer + Mailtrap
+CORS             : cors package
+Environment      : dotenv
+Dev Tool         : Nodemon
+Port             : 5000
+
+TOOLS & INFRASTRUKTUR
+
+Version Control  : Git
+Package Manager  : npm
+Database GUI     : phpMyAdmin / MySQL Workbench
+Editor           : Visual Studio Code
+
+
+================================================================================
+FITUR YANG TERSEDIA
+================================================================================
+
+FITUR PASIEN
+
+[1]  Registrasi Akun
+     Pasien baru dapat mendaftar dengan mengisi data diri lengkap (nama,
+     NIK, jenis kelamin, tanggal lahir, alamat, nomor telepon, email,
+     password). Akun otomatis dibuat di tabel auth_user dengan role PASIEN.
+
+[2]  Login Pasien
+     Login menggunakan email dan password. Tombol quick-fill akun demo
+     tersedia untuk kemudahan pengujian (5 akun pasien siap pakai).
+
+[3]  Dashboard Pasien
+     Menampilkan sambutan personal dan jadwal janji temu mendatang.
+
+[4]  Lihat Daftar Dokter
+     Penelusuran dokter dengan fitur pencarian nama / spesialisasi dan
+     filter berdasarkan sub-spesialisasi kardiologi.
+
+[5]  Detail & Profil Dokter
+     Profil lengkap dokter: spesialisasi, pengalaman, rating, jadwal.
+
+[6]  Jadwal Dokter
+     Jadwal praktik per hari dengan jam buka, jam tutup, durasi slot.
+
+[7]  Buat Janji Temu (Multi-Step)
+     Step 1 - Pilih dokter (search + filter spesialisasi)
+     Step 2 - Pilih tanggal (14 hari ke depan, visual kalender)
+     Step 3 - Pilih slot waktu (otomatis dari jadwal dokter)
+     Step 4 - Konfirmasi + isi keluhan/gejala
+
+[8]  Riwayat Janji Temu
+     Seluruh riwayat janji temu dengan status: Terjadwal / Selesai /
+     Dibatalkan.
+
+[9]  Rekam Medis
+     Rekam medis dari kunjungan yang telah selesai, dengan catatan dokter.
+
+[10] Layanan & Kontak
+     Informasi layanan klinik dan cara menghubungi.
+
+FITUR STAFF / ADMIN
+
+[11] Login Staff
+     Tab login terpisah untuk Admin dan Dokter. Validasi role otomatis,
+     akun pasien ditolak masuk portal staff. Tersedia 6 akun demo
+     (1 Admin + 5 Dokter) dengan tombol quick-fill.
+
+[12] Dashboard Staff
+     Statistik real-time: total janji hari ini, terjadwal, selesai,
+     dibatalkan, dan total pasien terdaftar.
+
+[13] Manajemen Janji Temu
+     Lihat seluruh janji temu, filter status/tanggal, ubah status
+     (Terjadwal -> Selesai / Dibatalkan).
+
+[14] Data Pasien
+     Daftar seluruh pasien terdaftar beserta informasi identitas & kontak.
+
+
+================================================================================
+STRUKTUR HALAMAN (ROUTING)
+================================================================================
+
+URL                      Halaman                    Akses
+/                        Beranda                    Publik
+/services                Layanan Klinik             Publik
+/doctors                 Daftar Dokter              Publik
+/doctors/:id             Detail Dokter              Publik
+/doctor-schedule         Jadwal Dokter              Publik
+/contact                 Kontak                     Publik
+/login                   Login (Pasien & Staff)     Publik
+/register                Registrasi Pasien          Publik
+/dashboard               Dashboard Pasien           Login Pasien
+/appointments            Buat Janji Temu            Login Pasien
+/appointment-history     Riwayat Janji Temu         Login Pasien
+/health-records          Rekam Medis                Login Pasien
+/staff-dashboard         Dashboard Staff            Login Staff
+
+
+================================================================================
+STRUKTUR DATABASE (8 TABEL)
+================================================================================
+
+Tabel                Keterangan
+inf_dokter           Data profil dan profesi dokter
+inf_pasien           Data profil dan identitas pasien
+auth_user            Akun login semua pengguna (Admin, Dokter, Pasien)
+inf_jadwal_dokter    Jadwal praktik dokter per hari dan jam
+inf_janji_temu       Data janji temu antara pasien dan dokter
+filedocter           File dokumen identitas milik dokter
+filepasien           File dokumen identitas milik pasien
+audit_log            Log aktivitas dan status pemeriksaan pasien
+
+
+================================================================================
+CARA MENJALANKAN APLIKASI
+================================================================================
+
+Prasyarat:
+- Node.js v18+
+- MySQL 8.0 aktif (XAMPP / Laragon)
+- Database web_uts sudah diimport dari file SQL
+
+Terminal 1 - Backend:
+  cd server
+  npm install
+  npx prisma generate
+  node index.js
+  -> Server berjalan di: http://localhost:5000
+
+Terminal 2 - Frontend:
+  cd frontend
+  npm install
+  npm run dev
+  -> Buka browser: http://localhost:3000
+
+Konfigurasi server/.env:
+  DATABASE_URL="mysql://root:@127.0.0.1:3306/web_uts"
+  JWT_SECRET="secret_key_pilihan_anda"
+
+=================================================================================
+Endpoint server database smarthealth
+=================================================================================
+http://localhost:5000/api/doctors
+http://localhost:5000/api/doctors/specializations
+http://localhost:5000/api/doctors/1
+http://localhost:5000/api/doctors/1/available-slots?date=2026-05-05
+http://localhost:5000/api/doctors/2/available-slots?date=2026-05-06
+http://localhost:5000/api/users/patients
+http://localhost:5000/api/users/patients/stats
+http://localhost:5000/api/appointments/all
+http://localhost:5000/api/appointments/stats
+http://localhost:5000/api/appointments/patient/1
+http://localhost:5000/api/appointments/patient/2
+http://localhost:5000/api/appointments/upcoming/1
+http://localhost:5000/api/health-records/patient/1
+http://localhost:5000/api/health-records/patient/2
+
+
+================================================================================
+AKUN LOGIN DEMO
+================================================================================
+
+Staff / Admin (gunakan tab "Login Staff"):
+  admin@smarthealthy.id            | password123  -> Admin
+  andi.pratama@smarthealthy.id     | password123  -> Kardiologi Umum
+  siti.rahayu@smarthealthy.id      | password123  -> Kardiologi Intervensi
+  budi.santoso@smarthealthy.id     | password123  -> Elektrofisiologi
+  dewi.lestari@smarthealthy.id     | password123  -> Kardiologi Anak
+  reza.firmansyah@smarthealthy.id  | password123  -> Bedah Kardiotoraks
+
+Pasien (gunakan tab "Login Pasien"):
+  ahmad.fauzi@gmail.com            | password123
+  rina.kusuma@gmail.com            | password123
+  teguh.wibowo@gmail.com           | password123
+  maya.indah@gmail.com             | password123
+  hendra.gunawan@gmail.com         | password123
+
+
+================================================================================
+              (c) 2026 SmartHealth. Proyek UTS Web Programming.
+   Laurencio Luckson | Ervian Mentari | Shawn Michael | Jonathan Felix Fubrianto
+================================================================================
