@@ -22,7 +22,7 @@ Website ini bersifat upgradable konten, fitur, dan tampilan akan terus dikembang
 
 ---
 
-## 🔗 Link penting
+## 🔗 Link penting(code + video demo)
 
 *   **Source Code** : <sub>[![Google Drive](https://img.shields.io/badge/Google_Drive-Repository-34A853?style=flat&logo=googledrive&logoColor=white)](https://drive.google.com/drive/folders/1jliWODZskVRpyUMDvKU06VhNmBIuAP8l?usp=sharing)</sub>
 
