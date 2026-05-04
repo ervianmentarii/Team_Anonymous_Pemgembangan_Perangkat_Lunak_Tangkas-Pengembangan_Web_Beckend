@@ -20,6 +20,13 @@ Website ini bersifat upgradable konten, fitur, dan tampilan akan terus dikembang
 [![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens)](https://jwt.io/)
 [![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)](https://vitejs.dev/)
 
+---
+
+## 🔗 Link penting
+
+*   **Source Code** : <sub>[![Google Drive](https://img.shields.io/badge/Google_Drive-Repository-34A853?style=flat&logo=googledrive&logoColor=white)](https://drive.google.com/drive/folders/1jliWODZskVRpyUMDvKU06VhNmBIuAP8l?usp=sharing)</sub>
+
+*   **Video Demo** : <sub>[![YouTube](https://img.shields.io/badge/YouTube-Video_Demo-FF0000?style=flat&logo=youtube&logoColor=white)](https://youtu.be/NFxB7XhBth0)</sub>
 
 ---
 ## 1. Informasi Tim
@@ -48,9 +55,9 @@ Website dibangun menggunakan **Express.js** (Back-End) dan **React js** (Front-E
     npm install
     ```
 3. Konfigurasikan file `.env` (database URL, JWT secret, dsb.).
-4. Jalankan migrasi database dengan `npx prisma migrate dev`.
+4. Jalankan database dengan `npx prisma generate`.
     ```
-    npm prisma migrate dev
+    npm prisma generate
     ```
 5. Jalankan server dengan perintah `npm run dev`.
     ```
@@ -143,14 +150,6 @@ pembagian fitur oleh 4 anggota:
 | **Front-End** | React js + Vite |
 | **Keamanan** | JWT, bcrypt |
 | **Penyimpanan** | Cloudinary / Local Storage (untuk file upload) |
-
----
-
-## 🔗 Link penting
-
-*   **Source Code** : <sub>[![Google Drive](https://img.shields.io/badge/Google_Drive-Repository-34A853?style=flat&logo=googledrive&logoColor=white)](https://drive.google.com/drive/folders/1jliWODZskVRpyUMDvKU06VhNmBIuAP8l?usp=sharing)</sub>
-
-*   **Video Demo** : <sub>[![YouTube](https://img.shields.io/badge/YouTube-Video_Demo-FF0000?style=flat&logo=youtube&logoColor=white)](https://youtu.be/NFxB7XhBth0)</sub>
 
 ---
 
