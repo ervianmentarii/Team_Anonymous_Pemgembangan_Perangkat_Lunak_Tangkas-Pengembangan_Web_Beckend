@@ -29,6 +29,7 @@ Website ini bersifat upgradable konten, fitur, dan tampilan akan terus dikembang
 *   **Video Demo** : <sub>[![YouTube](https://img.shields.io/badge/YouTube-Video_Demo-FF0000?style=flat&logo=youtube&logoColor=white)](https://youtu.be/NFxB7XhBth0)</sub>
 
 *   **Link Domain** : https://frontend-smarthealth-anonymous-production.up.railway.app
+[![Railway](https://img.shields.io/badge/Railway-0B0D0E?style=for-the-badge&logo=railway&logoColor=white)](https://railway.app/)
 
 ---
 ## 1. Informasi Tim
