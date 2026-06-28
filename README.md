@@ -19,7 +19,7 @@ Website ini bersifat upgradable konten, fitur, dan tampilan akan terus dikembang
 [![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
 [![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens)](https://jwt.io/)
 [![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)](https://vitejs.dev/)
-
+[![Railway](https://img.shields.io/badge/Railway-0B0D0E?style=for-the-badge&logo=railway&logoColor=white)](https://railway.app/)
 ---
 
 ## 🔗 Link penting(code + video demo)
@@ -29,7 +29,7 @@ Website ini bersifat upgradable konten, fitur, dan tampilan akan terus dikembang
 *   **Video Demo** : <sub>[![YouTube](https://img.shields.io/badge/YouTube-Video_Demo-FF0000?style=flat&logo=youtube&logoColor=white)](https://youtu.be/NFxB7XhBth0)</sub>
 
 *   **Link Domain** : https://frontend-smarthealth-anonymous-production.up.railway.app
-[![Railway](https://img.shields.io/badge/Railway-0B0D0E?style=for-the-badge&logo=railway&logoColor=white)](https://railway.app/)
+
 
 ---
 ## 1. Informasi Tim
